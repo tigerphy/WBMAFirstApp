@@ -1,11 +1,11 @@
-import React from 'react';
-import {FlatList } from 'react-native';
-import {useLoadMedia} from '../hooks/ApiHooks';
-import ListItem from './ListItem';
-
+import React from "react";
+import { FlatList } from "react-native";
+import { useLoadMedia } from "../hooks/ApiHooks";
+import ListItem from "./ListItem";
 
 const List = () => {
-  const [mediaArray] = useLoadMedia();
+
+ const mediaArray = useLoadMedia();
 
   return (
     <FlatList
