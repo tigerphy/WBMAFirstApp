@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { FlatList } from "react-native";
 import ListItem from "./ListItem";
 
-const baseUrl ="http://media.mw.metropolia.fi/wbma"
+const baseUrl ="http://media.mw.metropolia.fi/wbma/";
 
 const List = () => {
   const [mediaArray, setMediaArray] = useState([]);
 
-  const loadMedia = async (limit =5) => {
+  const loadMedia = async (limit = 5) => {
     try{
       const listResponse = await fetch(baseUrl + "media?limit=" + limit);
       const listJson = await listResponse.json();
@@ -27,7 +27,7 @@ const List = () => {
     }
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     loadMedia(10);
   }, []);
 
