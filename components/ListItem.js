@@ -29,7 +29,8 @@ flexDirection: 'row',
 padding: 15,
 marginBottom: 15,
 backgroundColor: '#eee',
-borderRadius: 16,
+borderWidth: 2,
+borderColor: "brown",
 },
 imagebox: {
   flex:1,
@@ -37,17 +38,19 @@ imagebox: {
 image: {
   flex: 1,
   height: 150,
-  borderRadius: 6,
+  borderRadius:360,
   
 },
 textbox: {
   flex: 1,
   padding: 10,
+
 },
   listTitle: {
     fontWeight: "bold",
     fontSize: 20,
     paddingBottom: 15,
+    color: "orange",
   }
 });
 

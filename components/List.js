@@ -34,7 +34,7 @@ const mediaArray = [
 
 const List = () => {
   return (
-    <FlatList
+    <FlatList 
       data={mediaArray}
       renderItem={({item}) => <ListItem singleMedia={item} />}
     />
