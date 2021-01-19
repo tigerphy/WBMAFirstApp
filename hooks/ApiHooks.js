@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 //fetch data with AJAX
 const baseUrl = "http://media.mw.metropolia.fi/wbma/";
 
-//Hooks
+//ApiHooks
 const useLoadMedia = () => {
   //update the data to setMediaArray whenever the state is changed
   const [mediaArray, setMediaArray] = useState([]);
@@ -14,7 +14,6 @@ const useLoadMedia = () => {
       //Store data in json
       const listJson = await listResponse.json();
       console.log("response json data", listJson);
-
       //media is done after promise is finished
       const media = await Promise.all(
         listJson.map(async (item) => {
@@ -38,7 +37,6 @@ const useLoadMedia = () => {
   }, []);
 
   return mediaArray;
-  
 };
 
 export { useLoadMedia };
